@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up- Penora</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./home.js"></script>
+  </head>
+  <body class="bg-gray-800 text-white p-4 flex justify-center items-center min-h-screen">
+    <main
+      class="flex flex-col md:flex-row bg-gray-400 rounded-xl shadow-2xl border-2 border-gray-950 overflow-hidden w-full max-w-4xl"
+    >
+      <!-------------------------------------------- Left Side Image -------------------------------------->
+      <aside class="hidden md:block w-1/2">
+        <img
+          class="h-full w-full object-cover"
+          src="../img/enter.jpg"
+          alt="People joining hands as a symbol of connection"
+          title="Let's make our bond stronger"
+        />
+      </aside>
+
+      <!----------------------------Right Side Form ------------------------------------------------------>
+      <section class="bg-gray-400 text-black px-8 p-3 md:p-10 w-full md:w-1/2">
+        <header>
+          <h1 class="text-center text-2xl md:text-4xl font-bold mb-4">Register using</h1>
+          <div class="flex justify-center gap-5">
+            <button
+              class="cursor-pointer bg-gray-600 hover:bg-gray-700 text-white px-5 py-2 rounded-md"
+            >
+              Google
+            </button>
+            <button
+              class="cursor-pointer bg-gray-600 hover:bg-gray-500 text-white px-5 py-2 rounded-md"
+            >
+              Github
+            </button>
+            <button
+              class="cursor-pointer bg-gray-600 hover:bg-gray-500 text-white px-5 py-2 rounded-md"
+            >
+              LinkedIn
+            </button>
+          </div>
+        </header>
+
+        <div class="flex items-center my-3">
+          <hr class="grow border-gray-500" />
+          <span class="px-3 text-gray-700 text-sm">OR</span>
+          <hr class="grow border-gray-500" />
+        </div>
+
+        <h2 class="font-bold text-center text-xl md:text-2xl mb-3">Sign Up</h2>
+        <form class="space-y-4">
+          <div class="flex gap-5 py-2">
+            <div class="flex-1">
+              <label for="name" class="block text-sm font-medium mb-1">First name:</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Name"
+                required
+                class="w-full p-2 rounded-sm text-white bg-gray-700 focus:ring-2 focus:outline-none focus:ring-black"
+              />
+            </div>
+            <div class="flex-1">
+              <label for="last" class="block text-sm font-medium mb-1">Last name:</label>
+              <input
+                id="last"
+                type="text"
+                placeholder="Surname"
+                required
+                class="w-full p-2 rounded-sm text-white bg-gray-700 focus:ring-2 focus:outline-none focus:ring-black"
+              />
+            </div>
+          </div>
+
+          <div class="py-2">
+            <label for="username" class="block text-sm font-medium mb-1">Username:</label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Username"
+              required
+              class="w-full p-2 rounded-sm text-white bg-gray-700 focus:ring-2 focus:outline-none focus:ring-black"
+            />
+          </div>
+          <div class="py-2">
+            <label for="email" class="block text-sm font-medium mb-1">Email:</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter Your Email"
+              required
+              class="w-full p-2 rounded-sm text-white bg-gray-700 focus:ring-2 focus:outline-none focus:ring-black"
+            />
+          </div>
+          <div class="py-2">
+            <label for="password" class="block text-sm font-medium mb-1">Password:</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter Password"
+              required
+              class="w-full p-2 rounded-sm text-white bg-gray-700 focus:ring-2 focus:outline-none focus:ring-black"
+            />
+            <p class="text-black text-sm mt-1">Minimum length : 8 characters.</p>
+          </div>
+
+          <button
+            type="submit"
+            onclick="registerUser(event)"
+            class="w-full bg-blue-800 hover:bg-blue-600 text-white py-2 rounded-md cursor-pointer mt-2"
+          >
+            Sign Up
+          </button>
+
+          <p class="text-black text-sm text-center mt-2">
+            By creating an account, you agree to the
+            <a href="#" class="text-blue-500 underline hover:text-blue-900">terms & conditions</a>.
+            We occasionally send you account-related emails.
+          </p>
+
+          <p class="text-center mt-3">
+            Already have an account?
+            <a href="login.html" class="text-blue-500 font-bold hover:underline">Login</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
