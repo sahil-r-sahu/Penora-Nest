@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penora</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link href="./output.css" rel="stylesheet" />
+    <script defer src="landing.js"></script>
+  </head>
+
+  <body>
+    <!--------------------------------------------------Nav Bar------------------------------------------->
+    <nav class="bg-gray-900 text-white px-4 py-3 shadow-md z-50">
+      <div class="mx-auto flex justify-between items-center relative">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <a href="index.html" class="flex items-center space-x-2">
+            <img
+              src="../img/navBar_logo.png"
+              alt="Penora"
+              class="h-10 w-auto rounded-2xl cursor-pointer hover:shadow-2xl hover:shadow-white/70"
+            />
+          </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative w-72 lg:w-96 hidden md:block">
+          <input
+            type="text"
+            placeholder="Search blogs..."
+            class="w-full pl-10 pr-4 py-2 rounded-full text-white bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-gray-500 absolute left-3 top-2.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M16.65 10.5A6.15 6.15 0 1 1 10.5 4.35a6.15 6.15 0 0 1 6.15 6.15z"
+            />
+          </svg>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden ipad:flex lg:flex space-x-6 items-center">
+          <div class="relative group">
+            <button id="pdt-btn" class="hover:text-blue-400 focus:outline-none cursor-pointer">
+              Products🔽
+            </button>
+            <div
+              id="pdt-dropdown"
+              class="absolute left-0 hidden bg-gray-800 rounded-md mt-2 w-56 p-2 space-y-1 z-50"
+            >
+              <a href="./signup.html" class="block text-center hover:text-blue-400"
+                >Become a Member</a
+              >
+              <a href="#" class="block text-center hover:text-blue-400">Newsletter</a>
+              <a href="#" class="block text-center hover:text-blue-400">Play Games</a>
+              <a href="#" class="block text-center hover:text-blue-400">Kongo Group</a>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <button
+              id="resourses-btn"
+              class="hover:text-blue-400 focus:outline-none cursor-pointer"
+            >
+              Resources🔽
+            </button>
+            <div
+              id="resourses-dropdown"
+              class="absolute left-0 hidden bg-gray-800 rounded-md mt-2 w-56 p-2 space-y-1 z-50"
+            >
+              <a href="./contact.html" class="block text-center hover:text-blue-400"
+                >Support Center</a
+              >
+              <a href="./aboutUS.html" class="block text-center hover:text-blue-400">About Us</a>
+              <a href="#" class="block text-center hover:text-blue-400">Documentation</a>
+              <a href="#" class="block text-center hover:text-blue-400">Popular Blogs</a>
+              <a href="./login.html" class="block text-center hover:text-blue-400">Create a Blog</a>
+            </div>
+          </div>
+
+          <a href="./pricing.html" class="hover:text-blue-400">Plans & Pricing</a>
+        </div>
+
+        <!-- Buttons -->
+        <div class="hidden lg:flex space-x-4">
+          <a href="./login.html"
+            ><button
+              class="bg-purple-600 px-4 py-1 rounded-md hover:bg-blue-600 transition cursor-pointer"
+            >
+              Log In
+            </button>
+          </a>
+          <a href="./signup.html"
+            ><button
+              class="bg-purple-600 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition cursor-pointer"
+            >
+              Register
+            </button></a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="lg:hidden focus:outline-none text-3xl ipad:hidden">☰</button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-16 left-0 right-0 bg-gray-800 text-white flex-col items-center space-y-6 py-6 z-40 shadow-lg"
+      >
+        <input
+          type="text"
+          placeholder="Search blogs..."
+          class="w-full pl-10 pr-4 py-2 rounded-full text-white bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+
+        <div id="hidden-buttons" class="pt-2 border-t border-gray-700">
+          <a href="./login.html"
+            ><button
+              class="bg-blue-500 w-full px-4 py-1 rounded-md hover:bg-blue-600 transition cursor-pointer"
+            >
+              Log In
+            </button></a
+          >
+          <a href="./signup.html"
+            ><button
+              class="bg-white text-blue-600 w-full px-4 py-1 mt-2 rounded-md hover:bg-blue-100 transition cursor-pointer"
+            >
+              Register
+            </button></a
+          >
+        </div>
+
+        <div id="hidden-links">
+          <hr />
+          <br />
+          <div class="plans">
+            <a href="./pricing.html" class="hover:text-blue-400">Plans & Pricing</a>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="products">
+            <a href="./signup.html" class="block hover:text-blue-400">Become a Member</a>
+            <a href="#" class="block hover:text-blue-400">Newsletter</a>
+            <a href="#" class="block hover:text-blue-400">Play Games</a>
+            <a href="#" class="block hover:text-blue-400">Kongo Group</a>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="resourses">
+            <a href="./contact.html" class="block hover:text-blue-400">Support Center</a>
+            <a href="./aboutUS.html" class="block hover:text-blue-400">About Us</a>
+            <a href="#" class="block hover:text-blue-400">Documentation</a>
+            <a href="#" class="block hover:text-blue-400">Popular Blogs</a>
+            <a href="./login.html" class="block hover:text-blue-400">Create a Blog</a>
+          </div>
+          <br />
+          <hr />
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------------------------------Landing Page ------------------------------------------->
+
+    <main
+      class="bg-gray-800 min-h-screen text-white w-full px-8 py-12 flex items-center flex-col gap-16"
+    >
+      <div class="max-w-3xl text-start space-y-4">
+        <div>
+          <h1 class="text-2xl md:text-4xl font-extrabold text-purple-400">
+            Create. Share. Inspire. With Penora.
+          </h1>
+          <p class="text-white">
+            Join a growing community of writers, bloggers, and thinkers using Penora to publish
+            their stories. Experience effortless writing, customizable layouts, and built-in growth
+            tools that empower your voice to reach the world.
+          </p>
+        </div>
+        <div>
+          <a href="./login.html"
+            ><button
+              class="bg-purple-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg cursor-pointer"
+            >
+              Start Writing
+            </button></a
+          >
+          <div class="text-gray-400 text-sm">
+            <p class="py-1">
+              No coding or design experience required—get your free account in minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div
+          class="border-15 border-gray-500 rounded-4xl hover:shadow-2xl hover:shadow-indigo-500/70"
+        >
+          <video
+            class="rounded-2xl w-full max-w-4xl mx-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+            src="../img/hero-video (New).mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            controlsList="nodownload"
+          >
+            Every Pen has Writers aura --- Penora
+          </video>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center justify-between px-8 py-16 bg-gray-800 text-white hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl"
+      >
+        <!--Left Section: Text -->
+        <div class="max-w-lg text-start space-y-4">
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-indigo-400">
+            Simple meets Powerful.
+          </h1>
+          <p class="text-gray-300">
+            Whether you’re sharing personal stories, tech insights, or creative ideas — Penora makes
+            it effortless to start. Build, customize, and grow your blog at your own pace, no coding
+            or design skills required.
+          </p>
+          <div>
+            <a href="./login.html"
+              ><button class="bg-purple-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+                Create a Blog
+              </button></a
+            >
+            <p class="text-gray-400 text-sm py-1">
+              Get your free account now—just an email needed.
+            </p>
+          </div>
+        </div>
+
+        <!--Right Section: Image -->
+        <div class="lg:w-1/2 flex justify-around mt-12 lg:mt-0">
+          <img
+            src="../img/share Create.png"
+            alt="Create Blog"
+            class="rounded-4xl border-gray-500 border-4 w-96 lg:w-1/2 object-contain hover:shadow-2xl hover:shadow-indigo-500/70"
+          />
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-start gap-8 px-6 py-12 bg-gray-800 text-white extra-info hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl"
+      >
+        <!-- Left: Image -->
+        <div class="lg:w-1/2 flex justify-center lg:justify-start">
+          <img
+            src="../img/blog-anywhere (2).png"
+            alt="Blog Feature"
+            class="w-64 lg:w-full max-w-md rounded-2xl object-contain border-2 border-gray-600 hover:shadow-2xl hover:shadow-indigo-500/70"
+          />
+        </div>
+
+        <!-- Right: Accordion -->
+        <div class="lg:w-1/2 flex flex-col space-y-8 pt-16">
+          <!-- Item 1 (Open by default) -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">
+              ⟩ Blog beautifully
+            </h2>
+            <p class="text-gray-300 mt-1">
+              Customize your blog’s look and feel in a couple of clicks with beautifully designed
+              themes. Bring your writing to life with magical drag-and-drop layouts. Or put your
+              fingerprint on every font, color, and element on the page.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">⟩ Edit easily</h2>
+            <p class="text-gray-300 mt-1 hidden">
+              From simple and clean to glossy magazine – whatever your publishing style, the
+              intuitive block editor adapts to you. Drag, drop, and easily swap out your menu, punch
+              in a pull quote, or make your post pop with a beautiful gallery. Just like that.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">
+              ⟩ Share anything, simply
+            </h2>
+            <p class="text-gray-300 mt-1 hidden">
+              From video to audio, stories to GIFs, bring it all together—right from where you
+              write. And with plenty of storage for every type of media, your content’s secure, easy
+              to reuse anywhere on your blog, and owned by you alone.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl text-start space-y-4 self-start pl-4">
+        <div>
+          <h1 class="text-2xl md:text-4xl font-extrabold text-indigo-400">
+            Your ideas, your stage.
+          </h1>
+          <p class="text-gray-300">
+            On Penora, your content belongs to you. From the first word to your biggest audience, we
+            ensure your blog runs fast, secure, and reliably — every time.
+          </p>
+        </div>
+        <div>
+          <a href="./login.html"
+            ><button class="bg-purple-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+              Create Your Blog
+            </button></a
+          >
+          <div class="text-gray-400 text-sm">
+            <p class="py-1">“Your blog, your rules — absolutely free.”</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-start gap-8 px-6 py-12 bg-gray-800 text-white extra-info hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl"
+      >
+        <!-- Left: Image -->
+        <div class="lg:w-1/2 flex justify-center lg:justify-start">
+          <img
+            src="../img/blog-anything (2).png"
+            alt="Blog Feature"
+            class="w-64 lg:w-full max-w-md rounded-2xl object-contain border-2 border-gray-600 hover:shadow-2xl hover:shadow-indigo-500/70"
+          />
+        </div>
+
+        <!-- Right: Accordion -->
+        <div class="lg:w-1/2 flex flex-col space-y-8 pt-16">
+          <!-- Item 1 (Open by default) -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">
+              ⟩ Blog from anywhere
+            </h2>
+            <p class="text-gray-300 mt-1">
+              The Jetpack mobile app for iOS and Android puts total control of your blog a tap and
+              swipe away. Wherever you are at the time.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">
+              ⟩ Write now, publish later
+            </h2>
+            <p class="text-gray-300 mt-1 hidden">
+              With post-scheduling, you can catch your readers at the best time for them. And for
+              you. Write up a post, set your publish date, and then leave it to your blog to hit
+              publish.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item border-b border-gray-600 pb-4">
+            <h2 class="cursor-pointer text-xl font-bold text-indigo-400 py-2">
+              ⟩ Track your blog stats
+            </h2>
+            <p class="text-gray-300 mt-1 hidden">
+              Skim your blog stats with an at-a-glance dashboard. Or dig into the details of exactly
+              what’s resonating with your readers with charts, graphs, and deep-dive data, powered
+              by Jetpack.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl text-start space-y-4 self-start pl-4">
+        <div>
+          <h1 class="text-2xl md:text-4xl font-extrabold text-indigo-400">
+            Get noticed, effortlessly.
+          </h1>
+          <p class="text-gray-300">
+            You’ve created something amazing — now let the world see it. With built-in SEO tools,
+            social sharing in one click, a growing community, and easy ways to earn, your blog is
+            ready to shine.
+          </p>
+        </div>
+        <div>
+          <a href="./login.html"
+            ><button class="bg-purple-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+              Start Blog
+            </button></a
+          >
+          <div class="text-gray-400 text-sm">
+            <p class="py-1">Free to join, no payment required.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <section
+          class="min-h-screen bg-gray-900 text-white px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl"
+        >
+          <!-- Block 1: SEO -->
+          <div
+            class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-indigo-500/50 transition-all"
+          >
+            <h2 class="text-2xl font-bold text-indigo-400 flex items-center gap-2">
+              🚀 SEO, to go
+            </h2>
+            <p class="mt-4 text-gray-300 leading-relaxed">
+              Get found faster thanks to built-in search engine optimization tools. Clean URLs,
+              automatic sitemaps, and custom titles and descriptions help put your blog at the top
+              of the stack in search results.
+            </p>
+          </div>
+
+          <!-- Block 2: Find Your Audience -->
+          <div
+            class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-indigo-500/50 transition-all"
+          >
+            <h2 class="text-2xl font-bold text-indigo-400 flex items-center gap-2">
+              🌍 Find your audience
+            </h2>
+            <p class="mt-4 text-gray-300 leading-relaxed">
+              Say hello to a huge community of bloggers, creators, and avid readers every time you
+              publish. Penora’s built-in Reader means millions of people can easily find, follow,
+              and share your blog.
+            </p>
+          </div>
+
+          <!-- Block 3: Take It to Social -->
+          <div
+            class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-indigo-500/50 transition-all"
+          >
+            <h2 class="text-2xl font-bold text-indigo-400 flex items-center gap-2">
+              📣 Take it to social
+            </h2>
+            <p class="mt-4 text-gray-300 leading-relaxed">
+              Put the word out on social media with no extra work. Set up automatic social updates
+              once — then leave it to Penora to post on Facebook, Tumblr, and LinkedIn every time
+              you hit publish.
+            </p>
+          </div>
+
+          <!-- Block 4: Get Paid -->
+          <div
+            class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-indigo-500/50 transition-all"
+          >
+            <h2 class="text-2xl font-bold text-indigo-400 flex items-center gap-2">
+              💰 Get paid for what you made
+            </h2>
+            <p class="mt-4 text-gray-300 leading-relaxed">
+              Let your audience support your hard work with built-in monetization tools. From
+              shipping merch to selling downloads, taking donations to offering memberships —
+              everything you need to collect payments is baked right in.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div
+        class="w-full flex justify-center hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl"
+      >
+        <img
+          src="../img/example.png"
+          alt="Blog-example"
+          class="h-[99vh] w-auto lg:w-auto object-cover border-2 border-gray-600 hover:shadow-2xl hover:shadow-indigo-500/70 rounded-2xl"
+        />
+      </div>
+
+      <div>
+        <p class="font-bold">People Love Penora</p>
+      </div>
+
+      <!------------------------------------------Testimonial ------------------------------------------->
+
+      <div
+        class="w-full max-w-4xl mx-auto bg-gray-800 text-white p-6 rounded-xl relative flex items-center justify-center"
+      >
+        <!-- Navigation Arrows -->
+        <button
+          id="prev-btn"
+          class="bg-blue-500 px-3 py-1 rounded-full hover:bg-blue-600 lg:absolute lg:left-4"
+        >
+          ⬅
+        </button>
+
+        <!-- Testimonial Container -->
+        <div class="w-full min-h-[200px] flex items-center justify-center">
+          <div class="testimonial flex-1 text-center lg:text-center">
+            <p class="text-lg text-gray-300">
+              "Penora has allowed me to present my content in an attractive way. It gave me a
+              platform to reach thousands of people. It made people notice me and what I write… With
+              my Penora, I feel like a professional."
+            </p>
+            <p class="text-sm mt-4 text-indigo-400 font-semibold">— Tushal Lohar</p>
+          </div>
+
+          <div class="testimonial text-center w-full hidden">
+            <p class="text-lg text-gray-300">
+              "My entire life has been invested in the written word, printing and publishing. Penora
+              is the best resource I have ever used."
+            </p>
+            <p class="text-sm mt-4 text-indigo-400 font-semibold">— Grishaa Aroskar</p>
+          </div>
+
+          <div class="testimonial text-center w-full hidden">
+            <p class="text-lg text-gray-300">
+              "Over the years, I’ve acquired a gratifying number of readers and followers, with more
+              arriving each day, and I owe much of that audience to the tools and opportunities that
+              Penora provides."
+            </p>
+            <p class="text-sm mt-4 text-indigo-400 font-semibold">— Kashif Shaikh</p>
+          </div>
+
+          <div class="testimonial text-center w-full hidden">
+            <p class="text-lg text-gray-300">
+              "I love the customization options. My blog looks exactly how I want it! Finally a
+              platform that gives me full control over my content"
+            </p>
+            <p class="text-sm mt-4 text-indigo-400 font-semibold">— Parth Sakpal</p>
+          </div>
+
+          <div class="testimonial text-center w-full hidden">
+            <p class="text-lg text-gray-300">
+              "Penora has completely changed the way I blog. Easy, intuitive, and powerful!"
+            </p>
+            <p class="text-sm mt-4 text-indigo-400 font-semibold">— Abhijeet Prajapati</p>
+          </div>
+        </div>
+        <button
+          id="next-btn"
+          class="bg-blue-500 px-3 py-1 rounded-full hover:bg-blue-600 lg:absolute lg:right-4"
+        >
+          ➡
+        </button>
+      </div>
+
+      <div class="max-w-3xl text-start space-y-4 self-start pl-4">
+        <div>
+          <h1 class="text-2xl md:text-4xl font-extrabold text-indigo-400">You’re in control.</h1>
+          <p class="text-gray-300">
+            With WordPress.com, your content belongs to you alone. Count on us to keep your site
+            strong, safe, and lightning fast, so you’ll never lose a site visitor.
+          </p>
+        </div>
+        <div>
+          <a href="./login.html"
+            ><button class="bg-purple-700 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+              Start Blog
+            </button></a
+          >
+          <div class="text-gray-400 text-sm">
+            <p class="py-1">Let your pen make some noise. Start now</p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------------------ Q&A Made With AI --------------------------------------->
+
+      <section class="bg-gray-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2
+            class="text-4xl font-bold mb-4 bg-linear-to-r from-indigo-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent"
+          >
+            💬 You asked, we answered.
+          </h2>
+          <p class="text-gray-400">
+            Everything you need to know about building, growing, and monetizing your blog with
+            <a href="./index.html"><span class="text-indigo-400 font-semibold">Penora</span></a> .
+          </p>
+        </div>
+
+        <!-- Q&A container -->
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- Question 6 -->
+          <div
+            class="group border border-green-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(34,197,94,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-green-300 focus:outline-none"
+              onclick="toggleAnswer(6)"
+            >
+              <span>Why did we name it “Penora”? ✍️</span>
+              <svg
+                id="icon-6"
+                class="w-5 h-5 text-green-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-6" class="text-gray-400 mt-3 hidden">
+              At Penora,
+              <span class="text-green-500 font-bold"
+                >we believe that every pen holds a writer’s aura</span
+              >
+              — the unique energy, creativity, and emotion that flow through words. ✨ The name
+              Penora is born from this belief — Pen + Aura. It symbolizes our mission to empower
+              every writer, creator, and thinker to express their stories freely and share their
+              aura with the world. 🌍💫
+            </p>
+          </div>
+          <!-- Question 1 -->
+          <div
+            class="group border border-indigo-600 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(79,70,229,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-indigo-300 focus:outline-none"
+              onclick="toggleAnswer(1)"
+            >
+              <span>🌐 What makes Penora SEO-friendly?</span>
+              <svg
+                id="icon-1"
+                class="w-5 h-5 text-indigo-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-1" class="text-gray-400 mt-3 hidden">
+              Penora includes built-in 🧭 SEO tools — clean URLs, automatic sitemaps, meta tags, and
+              customizable titles — so your blog ranks higher on search engines right from the
+              start.
+            </p>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            class="group border border-pink-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(236,72,153,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-pink-300 focus:outline-none"
+              onclick="toggleAnswer(2)"
+            >
+              <span>👥 How does Penora help me grow my audience?</span>
+              <svg
+                id="icon-2"
+                class="w-5 h-5 text-pink-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-2" class="text-gray-400 mt-3 hidden">
+              With Penora’s built-in Reader, your posts reach a massive 🌎 community of readers and
+              creators. You get instant visibility and can build loyal followers organically.
+            </p>
+          </div>
+
+          <!-- Question 3 -->
+          <div
+            class="group border border-yellow-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(234,179,8,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-yellow-300 focus:outline-none"
+              onclick="toggleAnswer(3)"
+            >
+              <span>📢 Can I share my posts automatically on social media?</span>
+              <svg
+                id="icon-3"
+                class="w-5 h-5 text-yellow-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-3" class="text-gray-400 mt-3 hidden">
+              Absolutely! 🚀 Penora connects directly with your social media — Facebook, LinkedIn,
+              Tumblr, and more. Once connected, every new post automatically shares itself, saving
+              you time.
+            </p>
+          </div>
+
+          <!-- Question 4 -->
+          <div
+            class="group border border-green-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(34,197,94,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-green-300 focus:outline-none"
+              onclick="toggleAnswer(4)"
+            >
+              <span>💰 How can I earn from my blog?</span>
+              <svg
+                id="icon-4"
+                class="w-5 h-5 text-green-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-4" class="text-gray-400 mt-3 hidden">
+              Penora includes built-in 💵 monetization — accept donations, sell merch, digital
+              products, or subscriptions. No plugins needed. Just turn on payments and start
+              earning!
+            </p>
+          </div>
+
+          <!-- Question 5 -->
+          <div
+            class="group border border-indigo-400 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(129,140,248,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-indigo-300 focus:outline-none"
+              onclick="toggleAnswer(5)"
+            >
+              <span>⚙️ Do I need coding skills to use Penora?</span>
+              <svg
+                id="icon-5"
+                class="w-5 h-5 text-indigo-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-5" class="text-gray-400 mt-3 hidden">
+              Nope! 🙅‍♂️ Penora is built for everyone. You can create, publish, and customize your
+              entire blog visually — no coding or design experience required.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!------------------------------------------ Footer Made With AI  ------------------------------------>
+
+    <!-- 🌙 Footer Section -->
+    <footer class="bg-gray-950 text-gray-400 pt-16 pb-10 px-4 relative">
+      <!-- Gradient top border -->
+      <div
+        class="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-indigo-500 via-pink-500 to-yellow-400"
+      ></div>
+
+      <!-- Footer Grid -->
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 text-center md:text-left">
+        <!-- Brand Section -->
+        <div>
+          <h2
+            class="text-3xl font-bold bg-linear-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            ✍️ Penora
+          </h2>
+          <p class="mt-4 text-gray-400">
+            The smartest blogging platform for creative minds. Simple, flexible, and built for
+            growth.
+          </p>
+          <div class="flex justify-center md:justify-start space-x-4 mt-5">
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-indigo-600 transition-all shadow-md hover:shadow-indigo-500/40"
+            >
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-pink-500 transition-all shadow-md hover:shadow-pink-500/40"
+            >
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-sky-500 transition-all shadow-md hover:shadow-sky-400/40"
+            >
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-green-500 transition-all shadow-md hover:shadow-green-400/40"
+            >
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="./index.html" class="hover:text-indigo-400 transition-all">Home</a></li>
+            <li><a href="./aboutUS.html" class="hover:text-indigo-400 transition-all">About</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-all">Features</a></li>
+            <li>
+              <a href="./pricing.html" class="hover:text-indigo-400 transition-all">Pricing</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="hover:text-indigo-400 transition-all">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Resources</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="./contact.html" class="hover:text-pink-400 transition-all">Help Center</a>
+            </li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">API Docs</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Stay Updated</h3>
+          <p class="text-gray-400 mb-3">
+            Subscribe for the latest updates, writing tips, and feature releases 🚀
+          </p>
+          <form class="flex flex-col gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-indigo-500 outline-none transition-all flex-1"
+            />
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-pink-500 text-white font-semibold hover:shadow-[0_0_15px_rgba(99,102,241,0.8)] transition-all"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-10 border-t border-gray-800"></div>
+
+      <!-- Bottom Section -->
+      <div class="text-center text-sm text-gray-500">
+        © <span id="year"></span>
+        <a href="./index.html"><span class="text-indigo-400 font-semibold">Penora</span></a
+        >. All Rights Reserved. Made with ❤️ for writers everywhere.
+      </div>
+    </footer>
+  </body>
+</html>
