@@ -32,7 +32,7 @@ This project is perfect for:
 
 ## 📸 Screenshots
 
-![Home Page](./img/preview.png)
+![Home Page]()
 
 ## ✨ Features
 
@@ -71,8 +71,6 @@ This project is perfect for:
 
 ```
 PENORA/
-├── .vscode/
-│   └── settings.json
 │
 ├── img/
 │   └── (images used across the site)
