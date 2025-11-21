@@ -1,8 +1,9 @@
 <div align="center">
 
 <div align="center">
-  <img src="./img/navBar_logo.png" alt="Penora Logo" width="140" style="border-radius: 10px;">
-
+    <p align="center">
+        <img src="./img/navBar_logo.png" width="120" style="border-radius: 10px; overflow: hidden;">
+    </p>
   <h1>Penora – Modern Blogging Platform</h1>
 </div>
 
@@ -32,7 +33,7 @@ This project is perfect for:
 
 ## 🌐 Live Demo
 
-🔗 https://your-app-url.vercel.app
+🔗 # [Penora – Modern Blogging Platform](https://github.com/your-username/penora)
 
 ## 📸 Screenshots
 
