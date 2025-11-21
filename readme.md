@@ -33,7 +33,7 @@ This project is perfect for:
 
 ## 🌐 Live Demo
 
-🔗 # [Penora – Modern Blogging Platform](https://github.com/your-username/penora)
+🔗 # [Penora – Modern Blogging Platform](https://sahil-r-sahu.github.io/Penora/)
 
 ## 📸 Screenshots
 
@@ -94,8 +94,7 @@ PENORA/
 │   ├── landing.js
 │   ├── output.css
 │   ├── pricing.html
-│   ├── signup.html
-│   └── index.js
+│   └── signup.html
 │
 ├── .env
 ├── .gitignore
@@ -104,6 +103,7 @@ PENORA/
 │
 ├── package.json
 ├── package-lock.json
+|── index.js
 │
 └── README.md
 ```
