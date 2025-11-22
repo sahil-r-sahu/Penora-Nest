@@ -37,7 +37,7 @@ This project is perfect for:
 
 ## 📸 Screenshots
 
-![Home Page]()
+![Home Page](./img/preview%20(2).png)
 
 ## ✨ Features
 
